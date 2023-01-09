@@ -9,5 +9,5 @@ def collatz(number):
             collatz(number)
         sys.exit()
 
-n=int(input())
+n=int(input("ENTER A NUMBER "))
 collatz(n)

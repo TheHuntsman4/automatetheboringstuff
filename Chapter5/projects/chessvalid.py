@@ -28,11 +28,6 @@ def isValidChessBoard(dic):
             flag=1
     if 2 in list(count.values()):
         flag=1
-
-
-
-
-
     if flag==1:
         return False
     else:

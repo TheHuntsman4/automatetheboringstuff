@@ -1,4 +1,4 @@
-test1={'1a':'wking', '6c': 'wqueen', '2g': 'bbishop', '2h': 'bknight', '3e': 'bking','1h':'bqueen','4a':'bpawn','4b':'bpawn','4c':'bpawn','4d':'bpawn','4e':'bpawn','4f':'bpawn','4g':'bpawn','4h':'bpawn','5a':'wpawn','5b':'wpawn','5c':'wpawn','5d':'wpawn','5e':'wpawn','5f':'wpawn','5g':'wpawn','5h':'wpawn'}
+test1={'1a':'wking', '6c': 'wqueen', '2g': 'bbishop', '2h': 'bknight', '3e': 'bking','1h':'zqueen','4a':'bpawn','4b':'bpawn','4c':'bpawn','4d':'bpawn','4e':'bpawn','4f':'bpawn','4g':'bpawn','4h':'bpawn','5a':'wpawn','5b':'wpawn','5c':'wpawn','5d':'wpawn','5e':'wpawn','5f':'wpawn','5g':'wpawn','5h':'wpawn'}
 test2={'1h': 'bking', '6c': 'wqueen', '2g': 'bbishop', '5h': 'bqueen', '3e': 'wking'}
 def isValidChessBoard(dic):
     flag=0
@@ -9,7 +9,11 @@ def isValidChessBoard(dic):
             loc.append(ele)
     on_board=0
     pieces=dic.values()
-    count={}
+    piece={1:'wqueen',2:'bqueen',3:'wpawn',4:'bpawn',5:'wrook',6:'brook',7:'wknight',8:'bknight',9:'wbishop',10:'bbishop',11:'wking',12:'bking'}
+    if dic.values() not in piece:
+        flag=1
+        
+    count={}            
     for i in pieces:
         count.setdefault(i,0)
         count[i]=count[i]+1

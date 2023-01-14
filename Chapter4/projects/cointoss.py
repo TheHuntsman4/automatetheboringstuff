@@ -1,12 +1,20 @@
 import random
-for
-count=0
-l=len(a)
-print(l)
-
-for i in range(0,len(a)-5,1):
-    if (a[i]==a[i+1] and a[i+1]==a[i+2] and a[i+2]==a[i+3] and a[i+3]==a[i+4] and a[i+4]==a[i+5] ):
-        count+=1
-print("loop exor")      
-print(count)
-
+numberOfStreaks = 0
+for experimentNumber in range(1,10001):
+    # Code that creates a list of 100 'heads' or 'tails' values.
+    ls=[]
+    for i in range(100):
+        toss=random.randint(0,1)
+        ls.append(toss)
+    # Code that checks if there is a streak of 6 heads or tails in a row.
+    streak=0
+    for j in ls:
+        if j==0:
+            streak+=1
+            if streak==6:
+                numberOfStreaks+=1
+                break
+        else:
+            
+            streak=0
+print('Chance of streak: %s%%' % (numberOfStreaks / 100))

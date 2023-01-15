@@ -13,8 +13,8 @@ def add_to_inventory(inventory, addedItems):
         inventory.setdefault(str(item), 0)
         inventory[item] += 1
 
-if __name__ == '__main__':
-    inv = {'gold coin': 42, 'rope': 1}
-    dragonLoot = ['gold coin', 'dagger', 'gold coin', 'gold coin', 'ruby']
-    add_to_inventory(inv, dragonLoot)
-    display_inventory(inv)
+
+inv = {'gold coin': 42, 'rope': 1}
+dragonLoot = ['gold coin', 'dagger', 'gold coin', 'gold coin', 'ruby']
+add_to_inventory(inv, dragonLoot)
+display_inventory(inv)

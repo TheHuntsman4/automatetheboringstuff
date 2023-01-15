@@ -1,6 +1,6 @@
 import re,shutil,os
 prefix=input("enter the prefix:")
-filename_regex=re.compile(r'^%s00(\d).txt$'%prefix)
+filename_regex=re.compile(r'^%s(\d)(\d)(\d).txt$'%prefix)
 os.chdir('/home/aniketh/Desktop/foo')
 i=0
 for folder ,subfolder,files in os.walk('/home/aniketh/Desktop/foo'):

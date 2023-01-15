@@ -1,7 +1,6 @@
 import sys
 def comma(spam):
     out=''
-    #spam.insert(-1,'and')
     for i in range(0,len(spam)-1):
         out+=spam[i]+', '
     out+='and '+spam[-1]
